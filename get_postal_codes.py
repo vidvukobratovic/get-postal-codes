@@ -1,6 +1,11 @@
 import pandas as pd
 import requests
 import re
+input_file = "input_addresses.xlsx"
+output_file = "output_addresses.xlsx"
+
+df = pd.read_excel(input_file)
+
 
 def get_postal_code(address, city, province):
     query = f"{address}, {city}, {province}"
